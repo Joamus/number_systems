@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Numbersystem Creator</title>
+</head>
+<body class="background">
+	
+	<div id="content" class="box">
+		<h3 class="box">Welcome to the number system creator :-)</h3>
+		<h3 id="error-message"></h3>
+
+		<div>
+			<label for="chosen-base">The base of your number system</label>
+			<input id="chosen-base" type="number">
+		</div>
+
+		<br>
+		<div>
+			<label for="chosen-symbols">The symbols after 9 (comma-separated)</label>
+			<input id="chosen-symbols" type="text">
+		</div>
+
+		<div class="flex-center">
+			<h4>Convert number from base 10 to number system</h4>
+			<div>
+				<label for="chosen-base">Base 10 number</label>
+				<input id="base-10-number-to-convert" type="text"><br>
+			</div>
+			<div>
+				<label for="chosen-base">Converted number</label>
+				<input id="converted-number" type="text" aria-disabled>
+
+			</div>
+			<br>
+			<button onclick="convertNumberFromBase10ToNumberSystem()">Convert</button>
+
+		</div>
+
+		<div class="flex-center">
+			<h4>Convert number from number system to base 10</h4>
+			<div>
+				<label for="number-from-number-system">Number from number system</label>
+				<input id="number-from-number-system" type="text"><br>
+			</div>
+			<div>
+				<label for="converted-number-base-10">Converted base 10 number</label>
+				<input id="converted-number-base-10" type="text" aria-disabled>
+
+			</div>
+			<br>
+
+			<button onclick="convertNumberNumberSystemToBase10()">Convert</button>
+
+		</div>
+
+		<br>
+		<button onclick="clearAll()">Clear all</button>
+	</div>
+
+
+	<script src="number-system.js"></script>
+	<script src="app.js"></script>
+
+
+
+</body>
+<style>
+	html {
+		font-family: 'Courier New', Courier, monospace;
+	}
+	.background {
+		background-color: beige;
+	}
+	.box {
+		/* display: flex;
+		align-items: center;
+		justify-content: center;*/
+		text-align: center;
+	}
+	.flex-center {
+
+	}
+	#error-message {
+		color: lightcoral;
+	}
+
+</style>
+</html>
